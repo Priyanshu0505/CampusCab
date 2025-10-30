@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - CampusCab</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-dashboard">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">CampusCab</a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Find a Vehicle</a></li>
+                <li><a href="#" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>My Bookings</h2>
+            <p>Here are all the vehicle bookings you have made.</p>
+            
+            <div class="booking-list" id="booking-list-container">
+                </div>
+        </div>
+    </main>
+
+    <script src="scripts/api.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

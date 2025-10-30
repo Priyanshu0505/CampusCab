@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agency Dashboard - CampusCab</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-dashboard">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">CampusCab</a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="dashboard-grid">
+                
+                <div class="dashboard-card">
+                    <h3>Add a New Vehicle</h3>
+                    <form class="auth-form" id="add-vehicle-form">
+                        <div class="form-group-full">
+                            <label for="modelName">Model Name</label>
+                            <input type="text" id="modelName" required>
+                        </div>
+                        <div class="form-group-full">
+                            <label for="type">Vehicle Type</label>
+                            <select id="type" required>
+                                <option value="Sedan">Sedan</option>
+                                <option value="SUV">SUV</option>
+                                <option value="Hatchback">Hatchback</option>
+                                <option value="Bike">Bike</option>
+                                <option value="Truck">Truck</option>
+                            </select>
+                        </div>
+                        <div class="form-group-full">
+                            <label for="pricePerDay">Price Per Day (INR)</label>
+                            <input type="number" id="pricePerDay" required>
+                        </div>
+                        <div class="form-group-full">
+                            <label for="image">Vehicle Image</label>
+                            <input type="file" id="image" class="file-input" accept="image/*" required>
+                        </div>
+                        <div class="form-group-full">
+                            <label for="description">Description (Optional)</label>
+                            <textarea id="description" rows="3" placeholder="e.g., Good condition, AC, 5-seater"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Add Vehicle</button>
+                    </form>
+                </div>
+
+                <div class="dashboard-card card-span-2">
+                    <h3>My Vehicle Listings</h3>
+                    <div class="booking-list" id="my-vehicles-list">
+                        </div>
+                </div>
+
+                <div class="dashboard-card card-span-3">
+                    <h3>My Vehicle Bookings</h3>
+                    <div class="booking-list" id="agency-booking-list">
+                        </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/api.js"></script>
+    <script src="scripts/main.js"></script>
+    <script>
+        document.body.classList.add('fade-in');
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusCab - Rent a Vehicle</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-main">
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">CampusCab</a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html" class="btn-primary">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Find Your Perfect Rental Vehicle</h1>
+            <p>Book from a wide range of vehicles, listed by trusted agencies.</p>
+            
+            <form class="search-form" id="search-form">
+    <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" placeholder="Enter a city or location">
+    </div>
+
+    <div class="form-group">
+        <label for="vehicle-type">Vehicle Type</label>
+        <select id="vehicle-type">
+            <option value="">All Types</option> <option value="Sedan">Sedan</option>
+            <option value="SUV">SUV</option>
+            <option value="Hatchback">Hatchback</option>
+            <option value="Bike">Bike</option>
+            <option value="Truck">Truck</option>
+        </select>
+    </div>
+    
+    <button type="submit" class="btn-primary">Search</button>
+</form>
+        </section>
+    </main>
+
+    <script src="scripts/api.js"></script>
+    <script src="scripts/main.js"></script>
+
+</body>
+</html>
