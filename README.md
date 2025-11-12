@@ -104,26 +104,5 @@ Right-click index.html → Open with Live Server.
 Project runs on http://127.0.0.1:5500 (connected to backend).
 
 ---
-### 4.📄 API Endpoints
-🔐 Authentication (/api/auth)
-Method	Route	Description
-POST	/register-user	Register a new user
-POST	/login-user	Login as user
-POST	/register-agency	Register a new agency
-POST	/login-agency	Login as agency
-🚘 Vehicles (/api/vehicles)
-Method	Route	Description
-POST	/	(Agency) Add a new vehicle (with file upload)
-GET	/	(Public) Get all vehicles, filter by type (e.g. ?type=SUV)
-GET	/my-vehicles	(Agency) View all agency vehicles
-GET	/:id	(Public) Get details of a single vehicle
-DELETE	/:id	(Agency) Delete owned vehicle
-📅 Bookings (/api/bookings)
-Method	Route	Description
-POST	/	(User) Create new booking
-GET	/my-bookings	(User) View user’s bookings
-GET	/agency-bookings	(Agency) View bookings for agency vehicles
-DELETE	/:id	(User/Agency) Delete a booking
-⚖️ License
 
 This project is licensed under the MIT License.
