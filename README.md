@@ -94,15 +94,17 @@ node server.js
 
 Your API will run on http://localhost:3000
 
-3. Frontend Setup
 
+---
+## 3. Frontend Setup
 Open the frontend folder in VS Code.
 
 Right-click index.html → Open with Live Server.
 
 Project runs on http://127.0.0.1:5500 (connected to backend).
 
-📄 API Endpoints
+---
+### 4.📄 API Endpoints
 🔐 Authentication (/api/auth)
 Method	Route	Description
 POST	/register-user	Register a new user
