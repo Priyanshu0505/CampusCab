@@ -72,13 +72,6 @@ Built with the **MERN stack (MongoDB, Express, React, Node.js)** and a **vanilla
 - VS Code (with *Live Server* extension recommended)
 
 ---
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-
-
 ### 2. Backend Setup
 cd backend
 npm install
