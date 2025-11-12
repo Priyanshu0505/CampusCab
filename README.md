@@ -1,8 +1,133 @@
-🚗 CampusCab - Vehicle Rental MarketplaceCampusCab is a full-stack web application designed as a marketplace for vehicle rentals. Built with the MERN stack (MongoDB, Express, Node.js) and a vanilla JavaScript frontend, this platform allows vehicle agencies to list their vehicles and users to browse, book, and manage their rentals.## ✨ Key Features👤 User (Customer)Authentication: Secure User Registration and Login with JWT (JSON Web Tokens).Dynamic Navbar: The navigation bar changes to show "My Bookings" and "Logout" when a user is logged in.Vehicle Search: Users can search for vehicles by type from the homepage.Booking System: Users can book a vehicle by selecting a start date, end date, and pickup time.Dual Payment Options:Mock "Pay Online": A simulated payment page that creates a "Confirmed" booking."Pay on Pickup": A "book now, pay later" option that creates a "Pending" booking.User Dashboard: A dedicated dashboard to view all past and upcoming bookings.Cancel Bookings: Users can permanently delete their own bookings.💼 Business (Vehicle Agency)Authentication: Separate Registration and Login for agencies.Agency Dashboard: A central hub for agencies to manage their business.Vehicle Management:Add new vehicles with details, price, descriptions, and image uploads (using multer).View all their listed vehicles in a "My Vehicle Listings" section.Delete their own vehicles.Booking Management:View a complete list of all bookings made for their vehicles.See booking details, including customer name, email, and pickup time.Cancel (delete) user bookings.🎨 UI/UXModern Dark Theme: A professional "frosted glass" (glassmorphism) design.Dynamic Backgrounds: Different professional background images for each section of the site (Home, Auth, Dashboards).Responsive Design: The layout adapts smoothly to both desktop and mobile devices.Empty State Handling: Professional "empty message" cards instead of blank sections.Animated UI: Subtle fade-in animations on page load.🛠️ Tech StackFrontendHTML5CSS3 (Flexbox, Grid, Custom Properties, Animations)JavaScript (ES6+) (Vanilla JS, Fetch API, DOM Manipulation)BackendNode.jsExpress.js (for routing and REST API)MongoDB (Database)Mongoose (Object Data Modeling)Key Librariesbcryptjs: For hashing user and agency passwords.jsonwebtoken (JWT): For user authentication and protected routes.multer: For handling image file uploads from the agency dashboard.cors: For cross-origin resource sharing.🚀 Getting StartedTo get a local copy up and running, follow these simple steps.PrerequisitesNode.js (v18+ recommended)MongoDB (running locally) or a MongoDB Atlas account.VS Code with the Live Server extension (recommended for the frontend).1. Clone the RepositoryBashgit clone https://github.com/your-username/your-repo-name.git
+# 🚗 CampusCab - Vehicle Rental Marketplace
+
+**CampusCab** is a full-stack web application designed as a marketplace for vehicle rentals.  
+Built with the **MERN stack (MongoDB, Express, React, Node.js)** and a **vanilla JavaScript frontend**, this platform allows vehicle agencies to list their vehicles and users to browse, book, and manage their rentals.
+
+---
+
+## ✨ Key Features
+
+### 👤 User (Customer)
+- **Authentication:** Secure User Registration and Login with JWT (JSON Web Tokens).  
+- **Dynamic Navbar:** Shows “My Bookings” and “Logout” when a user is logged in.  
+- **Vehicle Search:** Search vehicles by type directly from the homepage.  
+- **Booking System:** Book a vehicle by selecting start date, end date, and pickup time.  
+- **Dual Payment Options:**  
+  - **Mock “Pay Online”** – Simulated payment that creates a *Confirmed* booking.  
+  - **Pay on Pickup** – “Book now, pay later” option that creates a *Pending* booking.  
+- **User Dashboard:** View all past and upcoming bookings.  
+- **Cancel Bookings:** Users can delete their own bookings anytime.
+
+---
+
+### 💼 Business (Vehicle Agency)
+- **Authentication:** Separate Registration and Login for agencies.  
+- **Agency Dashboard:** Central hub for managing business activities.  
+- **Vehicle Management:**  
+  - Add vehicles with details, price, description, and images (using `multer`).  
+  - View all vehicles in a “My Vehicle Listings” section.  
+  - Delete owned vehicles.  
+- **Booking Management:**  
+  - View all bookings for agency vehicles.  
+  - See customer details like name, email, and pickup time.  
+  - Cancel user bookings when needed.
+
+---
+
+### 🎨 UI / UX
+- **Modern Dark Theme:** Frosted glass (glassmorphism) interface.  
+- **Dynamic Backgrounds:** Professional images for each section (Home, Auth, Dashboard).  
+- **Responsive Design:** Optimized for desktop and mobile.  
+- **Empty State Handling:** Clean “empty message” cards.  
+- **Animated UI:** Subtle fade-in transitions for smooth experience.
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- HTML5  
+- CSS3 (Flexbox, Grid, Custom Properties, Animations)  
+- JavaScript (ES6+) — Vanilla JS, Fetch API, DOM Manipulation  
+
+### Backend
+- Node.js  
+- Express.js (Routing & REST API)  
+- MongoDB (Database)  
+- Mongoose (ODM)
+
+### Key Libraries
+- `bcryptjs` – Password hashing  
+- `jsonwebtoken (JWT)` – Authentication and protected routes  
+- `multer` – Image file uploads  
+- `cors` – Cross-Origin Resource Sharing  
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18+ recommended)  
+- MongoDB (local or Atlas)  
+- VS Code (with *Live Server* extension recommended)
+
+---
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
-2. Backend SetupNavigate to the backend folder:Bashcd backend
-Install the NPM packages:Bashnpm install
-Open backend/db.js and set your MongoDB connection string:JavaScriptconst MONGO_URI = 'mongodb://localhost:27017/vehicleRentalDB';
-Open backend/routes/auth.js and backend/middleware/auth.js and change the JWT_SECRET to your own secret key:JavaScriptconst JWT_SECRET = 'your-super-secret-key';
-Start the backend server:Bashnode server.js
-Your API will now be running on http://localhost:3000.3. Frontend SetupOpen the frontend folder in VS Code.Right-click on index.html and select "Open with Live Server".Your project will open in your browser (e.g., http://127.0.0.1:5500), and it is already connected to your backend.📄 API EndpointsAuthentication (/api/auth)MethodRouteDescriptionPOST/register-userRegister a new user.POST/login-userLogin as a user.POST/register-agencyRegister a new agency.POST/login-agencyLogin as an agency.Vehicles (/api/vehicles)MethodRouteDescriptionPOST/(Agency) Add a new vehicle (handles file upload).GET/(Public) Get all vehicles, with filters (e.g., ?type=SUV).GET/my-vehicles(Agency) Get all vehicles owned by the logged-in agency.GET/:id(Public) Get details for a single vehicle.DELETE/:id(Agency) Delete a vehicle owned by the agency.Bookings (/api/bookings)MethodRouteDescriptionPOST/(User) Create a new booking.GET/my-bookings(User) Get all bookings for the logged-in user.GET/agency-bookings(Agency) Get all bookings for the agency's vehicles.DELETE/:id(User/Agency) Delete a specific booking.⚖️ LicenseThis project is licensed under the MIT License.
+2. Backend Setup
+bash
+Copy code
+cd backend
+npm install
+Edit backend/db.js to set your MongoDB connection string:
+
+javascript
+Copy code
+const MONGO_URI = 'mongodb://localhost:27017/vehicleRentalDB';
+Edit backend/routes/auth.js and backend/middleware/auth.js to set your JWT secret:
+
+javascript
+Copy code
+const JWT_SECRET = 'your-super-secret-key';
+Start the backend server:
+
+bash
+Copy code
+node server.js
+Your API will run on http://localhost:3000
+
+3. Frontend Setup
+Open the frontend folder in VS Code.
+
+Right-click index.html → Open with Live Server.
+
+Project runs on http://127.0.0.1:5500 (connected to backend).
+
+📄 API Endpoints
+🔐 Authentication (/api/auth)
+Method	Route	Description
+POST	/register-user	Register a new user
+POST	/login-user	Login as user
+POST	/register-agency	Register a new agency
+POST	/login-agency	Login as agency
+
+🚘 Vehicles (/api/vehicles)
+Method	Route	Description
+POST	/	(Agency) Add a new vehicle (with file upload)
+GET	/	(Public) Get all vehicles, filter by type (e.g. ?type=SUV)
+GET	/my-vehicles	(Agency) View all agency vehicles
+GET	/:id	(Public) Get details of a single vehicle
+DELETE	/:id	(Agency) Delete owned vehicle
+
+📅 Bookings (/api/bookings)
+Method	Route	Description
+POST	/	(User) Create new booking
+GET	/my-bookings	(User) View user’s bookings
+GET	/agency-bookings	(Agency) View bookings for agency vehicles
+DELETE	/:id	(User/Agency) Delete a booking
+
+⚖️ License
+This project is licensed under the MIT License.
