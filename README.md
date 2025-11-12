@@ -77,29 +77,31 @@ Built with the **MERN stack (MongoDB, Express, React, Node.js)** and a **vanilla
 ```bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
+
 2. Backend Setup
-bash
-Copy code
 cd backend
 npm install
+
+
 Edit backend/db.js to set your MongoDB connection string:
 
-javascript
-Copy code
 const MONGO_URI = 'mongodb://localhost:27017/vehicleRentalDB';
+
+
 Edit backend/routes/auth.js and backend/middleware/auth.js to set your JWT secret:
 
-javascript
-Copy code
 const JWT_SECRET = 'your-super-secret-key';
+
+
 Start the backend server:
 
-bash
-Copy code
 node server.js
+
+
 Your API will run on http://localhost:3000
 
 3. Frontend Setup
+
 Open the frontend folder in VS Code.
 
 Right-click index.html → Open with Live Server.
@@ -113,7 +115,6 @@ POST	/register-user	Register a new user
 POST	/login-user	Login as user
 POST	/register-agency	Register a new agency
 POST	/login-agency	Login as agency
-
 🚘 Vehicles (/api/vehicles)
 Method	Route	Description
 POST	/	(Agency) Add a new vehicle (with file upload)
@@ -121,13 +122,12 @@ GET	/	(Public) Get all vehicles, filter by type (e.g. ?type=SUV)
 GET	/my-vehicles	(Agency) View all agency vehicles
 GET	/:id	(Public) Get details of a single vehicle
 DELETE	/:id	(Agency) Delete owned vehicle
-
 📅 Bookings (/api/bookings)
 Method	Route	Description
 POST	/	(User) Create new booking
 GET	/my-bookings	(User) View user’s bookings
 GET	/agency-bookings	(Agency) View bookings for agency vehicles
 DELETE	/:id	(User/Agency) Delete a booking
-
 ⚖️ License
+
 This project is licensed under the MIT License.
