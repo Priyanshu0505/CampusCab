@@ -105,4 +105,4 @@ Project runs on http://127.0.0.1:5500 (connected to backend).
 
 ---
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License..
