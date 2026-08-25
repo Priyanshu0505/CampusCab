@@ -3,7 +3,7 @@
 **CampusCab** is a full-stack web application designed as a marketplace for vehicle rentals.  
 Built with the **MERN stack (MongoDB, Express, React, Node.js)** and a **vanilla JavaScript frontend**, this platform allows vehicle agencies to list their vehicles and users to browse, book, and manage their rentals.
 
----
+----
 
 ## ✨ Key Features
 
